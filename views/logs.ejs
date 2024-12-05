@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logs</title>
+</head>
+<body>
+    <%- include('header.ejs') %>
+    <h1>Lista de Logs</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Ruta</th>
+                <th>Método</th>
+                <th>Creado En</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% logs.forEach(log => { %>
+                <tr>
+                    <td><%= log.id %></td>
+                    <td><%= log.ruta %></td>
+                    <td><%= log.metodo %></td>
+                    <td><%= log.creadoEn.toLocaleString() %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>

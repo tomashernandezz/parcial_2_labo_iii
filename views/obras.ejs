@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style/style.css">
+</head>
+<body>
+    <%- include('header.ejs') %>
+    <a href="http://localhost:3000/obras/subirObra">Subir Obra</a>
+    <h1>Lista de Obras de Arte</h1>
+    <% if (obras.length > 0) { %>
+        <% obras.forEach(obra => { %>
+            <div class="obra">
+                <img src="<%= obra.imagen %>" alt="<%= obra.nombre %>">
+                <div class="obra-info">
+                    <h2><%= obra.nombre %></h2>
+                    <p><strong>Año de Creación:</strong> <%= obra.anioDeCreacion %></p>
+                    <p><strong>Tipo:</strong> <%= obra.tipo %></p>
+                    <p><strong>Activo:</strong> <%= obra.activo ? 'Sí' : 'No' %></p>
+                </div>
+            </div>
+        <% }) %>
+    <% } else { %>
+        <p>No hay obras disponibles.</p>
+    <% } %>
+</body>
+</html>

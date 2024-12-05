@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #B3EFB2;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+header img {
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+img{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.botonesIndex
+{
+    font-size: 50px;
+    text-decoration: none;
+    background-color: #B3EFB2;
+    border-radius: 10%;
+}
+
+.botonesIndex:hover
+{
+    background-color: black;
+    color:#B3EFB2;
+    transition: .3s
+}
+
+.container
+{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+}
